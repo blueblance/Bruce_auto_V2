@@ -1,0 +1,14 @@
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\Debug\Bruce_auto_V2.csprojResolveAssemblyReference.cache
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\Debug\Bruce_auto_V2.Properties.Resources.resources
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\Debug\Bruce_auto_V2.csproj.GenerateResource.Cache
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\Debug\Bruce_auto_V2.Form1.resources
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\Bruce_auto_V2.exe
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\Bruce_auto_V2.pdb
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\AForge.Video.DirectShow.dll
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\AForge.Video.dll
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\AForge.dll
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\AForge.Video.xml
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\AForge.Video.DirectShow.xml
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\Debug\AForge.xml
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\Debug\Bruce_auto_V2.exe
+c:\users\blueblance\documents\visual studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\Debug\Bruce_auto_V2.pdb
