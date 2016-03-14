@@ -41,6 +41,7 @@ namespace Bruce_auto_V2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             if (button1.Text == "Start")
             {
                 button1.Text = "Stop";
@@ -51,6 +52,10 @@ namespace Bruce_auto_V2
                 button1.Text = "Start";
                 Cam.Stop();  // WebCam stops capturing images.
             }
+            */
+            MIPI calmipi = new MIPI();
+
+            textBox1.Text = calmipi.mipi_cal_function(80, 80, 80, 8, 8, 8, 1000 , 4).ToString();
         }
 
 
