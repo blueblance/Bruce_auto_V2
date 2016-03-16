@@ -40,7 +40,13 @@
             this.textBox_vfp = new System.Windows.Forms.TextBox();
             this.textBox_vbp = new System.Windows.Forms.TextBox();
             this.textBox_vsa = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.檔案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.儲存設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.讀取設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -81,65 +87,109 @@
             // 
             // textBox_hsa
             // 
-            this.textBox_hsa.Location = new System.Drawing.Point(166, 30);
+            this.textBox_hsa.Location = new System.Drawing.Point(27, 30);
             this.textBox_hsa.Name = "textBox_hsa";
             this.textBox_hsa.Size = new System.Drawing.Size(72, 22);
             this.textBox_hsa.TabIndex = 4;
             // 
             // textBox_hbp
             // 
-            this.textBox_hbp.Location = new System.Drawing.Point(278, 30);
+            this.textBox_hbp.Location = new System.Drawing.Point(108, 30);
             this.textBox_hbp.Name = "textBox_hbp";
             this.textBox_hbp.Size = new System.Drawing.Size(72, 22);
             this.textBox_hbp.TabIndex = 6;
             // 
             // textBox_hactive
             // 
-            this.textBox_hactive.Location = new System.Drawing.Point(502, 30);
+            this.textBox_hactive.Location = new System.Drawing.Point(269, 30);
             this.textBox_hactive.Name = "textBox_hactive";
             this.textBox_hactive.Size = new System.Drawing.Size(72, 22);
             this.textBox_hactive.TabIndex = 10;
             // 
             // textBox_hfp
             // 
-            this.textBox_hfp.Location = new System.Drawing.Point(390, 30);
+            this.textBox_hfp.Location = new System.Drawing.Point(189, 30);
             this.textBox_hfp.Name = "textBox_hfp";
             this.textBox_hfp.Size = new System.Drawing.Size(72, 22);
             this.textBox_hfp.TabIndex = 8;
             // 
             // textBox_vactive
             // 
-            this.textBox_vactive.Location = new System.Drawing.Point(502, 58);
+            this.textBox_vactive.Location = new System.Drawing.Point(269, 58);
             this.textBox_vactive.Name = "textBox_vactive";
             this.textBox_vactive.Size = new System.Drawing.Size(72, 22);
             this.textBox_vactive.TabIndex = 14;
             // 
             // textBox_vfp
             // 
-            this.textBox_vfp.Location = new System.Drawing.Point(390, 58);
+            this.textBox_vfp.Location = new System.Drawing.Point(189, 58);
             this.textBox_vfp.Name = "textBox_vfp";
             this.textBox_vfp.Size = new System.Drawing.Size(72, 22);
             this.textBox_vfp.TabIndex = 13;
             // 
             // textBox_vbp
             // 
-            this.textBox_vbp.Location = new System.Drawing.Point(278, 58);
+            this.textBox_vbp.Location = new System.Drawing.Point(108, 58);
             this.textBox_vbp.Name = "textBox_vbp";
             this.textBox_vbp.Size = new System.Drawing.Size(72, 22);
             this.textBox_vbp.TabIndex = 12;
             // 
             // textBox_vsa
             // 
-            this.textBox_vsa.Location = new System.Drawing.Point(166, 58);
+            this.textBox_vsa.Location = new System.Drawing.Point(27, 58);
             this.textBox_vsa.Name = "textBox_vsa";
             this.textBox_vsa.Size = new System.Drawing.Size(72, 22);
             this.textBox_vsa.TabIndex = 11;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(411, 137);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.檔案ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1363, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 檔案ToolStripMenuItem
+            // 
+            this.檔案ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.儲存設定ToolStripMenuItem,
+            this.讀取設定ToolStripMenuItem});
+            this.檔案ToolStripMenuItem.Name = "檔案ToolStripMenuItem";
+            this.檔案ToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.檔案ToolStripMenuItem.Text = "檔案";
+            // 
+            // 儲存設定ToolStripMenuItem
+            // 
+            this.儲存設定ToolStripMenuItem.Name = "儲存設定ToolStripMenuItem";
+            this.儲存設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.儲存設定ToolStripMenuItem.Text = "儲存設定";
+            this.儲存設定ToolStripMenuItem.Click += new System.EventHandler(this.儲存設定ToolStripMenuItem_Click);
+            // 
+            // 讀取設定ToolStripMenuItem
+            // 
+            this.讀取設定ToolStripMenuItem.Name = "讀取設定ToolStripMenuItem";
+            this.讀取設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.讀取設定ToolStripMenuItem.Text = "讀取設定";
+            this.讀取設定ToolStripMenuItem.Click += new System.EventHandler(this.讀取設定ToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1363, 618);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox_vactive);
             this.Controls.Add(this.textBox_vfp);
             this.Controls.Add(this.textBox_vbp);
@@ -152,11 +202,15 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +230,11 @@
         private System.Windows.Forms.TextBox textBox_vfp;
         private System.Windows.Forms.TextBox textBox_vbp;
         private System.Windows.Forms.TextBox textBox_vsa;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 檔案ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 儲存設定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 讀取設定ToolStripMenuItem;
     }
 }
 

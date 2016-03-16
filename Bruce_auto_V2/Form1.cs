@@ -54,8 +54,9 @@ namespace Bruce_auto_V2
             }
             */
             MIPI calmipi = new MIPI();
-
-            textBox1.Text = calmipi.mipi_cal_function(80, 80, 80, 8, 8, 8, 1000 , 4).ToString();
+            calmipi.set_porch(120, 30, 80, 2, 18, 8);
+            textBox1.Text = calmipi.mipi_cal_function().ToString();
+            //textBox1.Text = calmipi.mipi_cal_function(80, 80, 80, 8, 8, 8, 1000 , 4).ToString();
         }
 
 
@@ -90,6 +91,23 @@ namespace Bruce_auto_V2
                 
                 MessageBox.Show("No video input device is connected.");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //MIPI mipical = new MIPI();
+            //string A = "3";
+            byte A = Convert.ToByte("0A", 16);
+        }
+
+        private void 儲存設定ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "儲存設定";
+        }
+
+        private void 讀取設定ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "讀取設定";
         }
     }
 }
