@@ -8,12 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using System.Threading;
+using PGRemoteRPC;
 
 namespace Bruce_auto_V2
 {
+    
     public delegate void Image_Display(Bitmap Image);
     public partial class Form1 : Form
     {
+        MIPI mipiclasss = new MIPI();
         
         
 
@@ -97,7 +100,18 @@ namespace Bruce_auto_V2
         {
             //MIPI mipical = new MIPI();
             //string A = "3";
-            byte A = Convert.ToByte("0A", 16);
+            //byte A = Convert.ToByte("0A", 16);
+            Thread T = new Thread(Video_Auto_Text);
+            Thread T2 = new Thread(Test_Dectect);
+
+                T.Start();
+            T2.Start();
+            
+                
+ 
+
+            
+            //T2.Start();
         }
 
         private void 儲存設定ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +122,53 @@ namespace Bruce_auto_V2
         private void 讀取設定ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBox1.Text = "讀取設定";
+        }
+
+        private void Video_Auto_Text()
+        {
+            MIPI controltext = new MIPI();
+
+            for(int i = 1; i<100; i++)
+            {
+                controltext.Settextbox(textBox1, i.ToString());
+                Thread.Sleep(500);
+            }
+        }
+
+        private void Test_Dectect()
+        {
+            MIPI controltext = new MIPI();
+
+            for (int i = 1; i < 100; i++)
+            {
+                controltext.Settextbox(textBox2, i.ToString());
+                Thread.Sleep(100);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.Red;
+        }
+
+        private void p338ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            p344ToolStripMenuItem.Checked = (p338ToolStripMenuItem.Checked) ? false : true;
+        }
+
+        private void p344ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            p338ToolStripMenuItem.Checked = (p344ToolStripMenuItem.Checked) ? false : true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            //String input = "101h 87h 21h 90h 00h 18h";
+            string input = "01h 87h 02h 00h 02h 39h";
+            textBox2.Text = mipiclasss.error_report_check(input);
+            
+
         }
     }
 }

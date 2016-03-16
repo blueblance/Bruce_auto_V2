@@ -41,7 +41,12 @@ namespace Bruce_auto_V2
         {
             if(tb.InvokeRequired)
             {
-                int a = (int)MIPI_error_report.Contention_is_Detected;
+                Settextboxcallback Sb = new Settextboxcallback(Settextbox);
+                tb.BeginInvoke(Sb, new object[] { tb, data });
+            }
+            else
+            {
+                tb.Text = data;
             }
         }
         public delegate void DisplayOnPictureBoxcallback(PictureBox pb, Bitmap Bp);
@@ -109,7 +114,25 @@ namespace Bruce_auto_V2
 
         }
 
+        public string error_report_check(String input)
+        {
+            string lsb, msb = null;
+            lsb = acquire_string(input, 3).Trim('h');
+            msb = acquire_string(input, 4).Trim('h');
+            return lsb + msb;
+            
 
+
+        }
+
+        public string acquire_string(String input , int num)
+        {
+            char[] delimate = { ' ', ','};
+            var words = input.Split(delimate);
+            return (num > words.Length) ? null : words[num];
+        }
+
+        
     }
 
     class PGcontrol

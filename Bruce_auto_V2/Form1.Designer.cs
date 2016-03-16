@@ -45,13 +45,18 @@
             this.檔案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.儲存設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.讀取設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.選擇機種ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.p338ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.p344ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(278, 137);
+            this.button1.Location = new System.Drawing.Point(432, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -70,7 +75,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(278, 245);
+            this.button2.Location = new System.Drawing.Point(432, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -80,10 +85,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(268, 324);
+            this.textBox1.Location = new System.Drawing.Point(422, 324);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox_hsa
             // 
@@ -143,7 +150,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(411, 137);
+            this.button3.Location = new System.Drawing.Point(565, 137);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 15;
@@ -154,7 +161,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.檔案ToolStripMenuItem});
+            this.檔案ToolStripMenuItem,
+            this.選擇機種ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1363, 24);
@@ -173,22 +181,66 @@
             // 儲存設定ToolStripMenuItem
             // 
             this.儲存設定ToolStripMenuItem.Name = "儲存設定ToolStripMenuItem";
-            this.儲存設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.儲存設定ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.儲存設定ToolStripMenuItem.Text = "儲存設定";
             this.儲存設定ToolStripMenuItem.Click += new System.EventHandler(this.儲存設定ToolStripMenuItem_Click);
             // 
             // 讀取設定ToolStripMenuItem
             // 
             this.讀取設定ToolStripMenuItem.Name = "讀取設定ToolStripMenuItem";
-            this.讀取設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.讀取設定ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.讀取設定ToolStripMenuItem.Text = "讀取設定";
             this.讀取設定ToolStripMenuItem.Click += new System.EventHandler(this.讀取設定ToolStripMenuItem_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(423, 364);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 17;
+            // 
+            // 選擇機種ToolStripMenuItem
+            // 
+            this.選擇機種ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.p338ToolStripMenuItem,
+            this.p344ToolStripMenuItem});
+            this.選擇機種ToolStripMenuItem.Name = "選擇機種ToolStripMenuItem";
+            this.選擇機種ToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.選擇機種ToolStripMenuItem.Text = "選擇機種";
+            // 
+            // p338ToolStripMenuItem
+            // 
+            this.p338ToolStripMenuItem.CheckOnClick = true;
+            this.p338ToolStripMenuItem.Name = "p338ToolStripMenuItem";
+            this.p338ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.p338ToolStripMenuItem.Text = "P338";
+            this.p338ToolStripMenuItem.Click += new System.EventHandler(this.p338ToolStripMenuItem_Click);
+            // 
+            // p344ToolStripMenuItem
+            // 
+            this.p344ToolStripMenuItem.CheckOnClick = true;
+            this.p344ToolStripMenuItem.Name = "p344ToolStripMenuItem";
+            this.p344ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.p344ToolStripMenuItem.Text = "P344";
+            this.p344ToolStripMenuItem.Click += new System.EventHandler(this.p344ToolStripMenuItem_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(565, 245);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1363, 618);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox_vactive);
             this.Controls.Add(this.textBox_vfp);
@@ -235,6 +287,11 @@
         private System.Windows.Forms.ToolStripMenuItem 檔案ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 儲存設定ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 讀取設定ToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripMenuItem 選擇機種ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem p338ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem p344ToolStripMenuItem;
+        private System.Windows.Forms.Button button4;
     }
 }
 
