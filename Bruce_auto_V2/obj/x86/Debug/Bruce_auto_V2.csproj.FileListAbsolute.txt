@@ -1,0 +1,15 @@
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\Bruce_auto_V2.exe
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\Bruce_auto_V2.pdb
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\AForge.Video.DirectShow.dll
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\AForge.Video.dll
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\PGRemoteRPCClient.DLL
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\AForge.dll
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\AForge.Video.xml
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\AForge.Video.DirectShow.xml
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\bin\x86\Debug\AForge.xml
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\x86\Debug\Bruce_auto_V2.csprojResolveAssemblyReference.cache
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\x86\Debug\Bruce_auto_V2.Form1.resources
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\x86\Debug\Bruce_auto_V2.Properties.Resources.resources
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\x86\Debug\Bruce_auto_V2.csproj.GenerateResource.Cache
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\x86\Debug\Bruce_auto_V2.exe
+C:\Users\blueblance\Documents\Visual Studio 2015\Projects\Bruce_auto_V2\Bruce_auto_V2\obj\x86\Debug\Bruce_auto_V2.pdb
