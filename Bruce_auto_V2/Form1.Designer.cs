@@ -45,11 +45,12 @@
             this.檔案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.儲存設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.讀取設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.選擇機種ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.p338ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.p344ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -192,13 +193,6 @@
             this.讀取設定ToolStripMenuItem.Text = "讀取設定";
             this.讀取設定ToolStripMenuItem.Click += new System.EventHandler(this.讀取設定ToolStripMenuItem_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(423, 364);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 17;
-            // 
             // 選擇機種ToolStripMenuItem
             // 
             this.選擇機種ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -212,7 +206,7 @@
             // 
             this.p338ToolStripMenuItem.CheckOnClick = true;
             this.p338ToolStripMenuItem.Name = "p338ToolStripMenuItem";
-            this.p338ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.p338ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.p338ToolStripMenuItem.Text = "P338";
             this.p338ToolStripMenuItem.Click += new System.EventHandler(this.p338ToolStripMenuItem_Click);
             // 
@@ -220,9 +214,16 @@
             // 
             this.p344ToolStripMenuItem.CheckOnClick = true;
             this.p344ToolStripMenuItem.Name = "p344ToolStripMenuItem";
-            this.p344ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.p344ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.p344ToolStripMenuItem.Text = "P344";
             this.p344ToolStripMenuItem.Click += new System.EventHandler(this.p344ToolStripMenuItem_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(423, 364);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 17;
             // 
             // button4
             // 
@@ -234,11 +235,21 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(59, 125);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 88);
+            this.listBox1.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1363, 618);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
@@ -292,6 +303,7 @@
         private System.Windows.Forms.ToolStripMenuItem p338ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem p344ToolStripMenuItem;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

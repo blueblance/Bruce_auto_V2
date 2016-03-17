@@ -163,10 +163,35 @@ namespace Bruce_auto_V2
 
         private void button4_Click(object sender, EventArgs e)
         {
+            string[] mipi_error_name =
+            {"SoT_Error",
+            "SoT_sync_Error",
+            "EoT_Sync_Error",
+            "Escape_Mode_Entry_Command_Error",
+            "LowPower_Transmit_Sync_Error",
+            "Any_protocol_TimeOut",
+            "Fale_Coontrol_Error",
+            "Contention_is_Detected",
+            "Single_ECC_Error",
+            "Multi_ECC_Error",
+            "CheckSum_Error",
+            "Data_Type_Not_Recognized",
+            "DSI_Vitrual_Channel_ID_Invalid",
+            "Invalid_Transmission_Length",
+            "Reserved",
+            "Protocol_Violation"};
 
             //String input = "101h 87h 21h 90h 00h 18h";
             string input = "01h 87h 02h 00h 02h 39h";
             textBox2.Text = mipiclasss.error_report_check(input);
+            //textBox2.Text = mipiclasss.MipiDphyhex_to_binary(textBox1.Text).ToString();
+            for (int i = 0; i< mipiclasss.errorstring.Length; i++)
+            {
+                if (mipiclasss.errorstring[i] == '1')
+                {
+                    listBox1.Items.Add(mipi_error_name[i]);
+                }
+            }
             
 
         }
