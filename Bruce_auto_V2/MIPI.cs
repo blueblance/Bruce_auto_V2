@@ -18,6 +18,9 @@ namespace Bruce_auto_V2
         private int vsa, vbp, vfp = 8;
         private int bitrate = 1000;
         private int lane = 4;
+        private int pixelformat = 24;
+        private double fr = 60;
+        private double hsbitrate = 1e9;
         public char[] error_record_array = new char[16];
         public string errorstring = "0000000000000000";
 
@@ -48,14 +51,22 @@ namespace Bruce_auto_V2
             }
 
         }
-        public double mipi_cal_function()
+        public double mipi_cal_framerate()
         {
 
             return (bitrate * 1e6 / ((hactive + hbp + hfp + hsa) * (vactive + vsa + vbp + vfp))) / 24 * lane;
         }
-        public double mipi_cal_function(int hsa, int hbp, int hfp, int vsa, int vbp, int vfp, int bitrate, int lane)
+        public double mipi_cal_framerate(int hsa, int hbp, int hfp, int vsa, int vbp, int vfp, int bitrate, int lane)
         {
             return (bitrate * 1e6 / ((hactive + hbp + hfp + hsa) * (vactive + vsa + vbp + vfp))) / 24 * lane;
+        }
+        public double mipi_cal_bitrate(int hsa, int hbp, int hfp, int vsa, int vbp, int vfp, double fr,int lane , int pixelformat)
+        {
+            return ((hactive + hbp + hfp + hsa) * (vactive + vsa + vbp + vfp) * pixelformat * fr) / lane;
+        }
+        public double mipi_cal_bitrate()
+        {
+            return ((hactive + hbp + hfp + hsa) * (vactive + vsa + vbp + vfp) * pixelformat * fr) / lane;
         }
         public void set_reslotuion(int hactive, int vactive)
         {
@@ -76,6 +87,19 @@ namespace Bruce_auto_V2
             this.lane = lane;
         }
 
+        public void set_pixelformat(int pixelformat)
+        {
+            if (pixelformat == 24 || pixelformat == 18 || pixelformat == 16)
+                this.pixelformat = pixelformat;
+            else
+                pixelformat = 24;
+
+        }
+
+        public void set_bitrate(double hsbitrate)
+        {
+            this.hsbitrate = hsbitrate;
+        }
 
 
         public string error_report_check(String input)
@@ -85,7 +109,7 @@ namespace Bruce_auto_V2
             msb = acquire_string(input, 4).Trim('h');
             string error_report = lsb + msb;
             if (error_report.Length != 4)
-                return "input data error";
+                return " ";
             else
             {
                 errorstring = MipiDphyhex_to_binary(error_report);

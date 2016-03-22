@@ -58,7 +58,7 @@ namespace Bruce_auto_V2
             */
             MIPI calmipi = new MIPI();
             calmipi.set_porch(120, 30, 80, 2, 18, 8);
-            textBox1.Text = calmipi.mipi_cal_function().ToString();
+            textBox1.Text = calmipi.mipi_cal_framerate().ToString();
             //textBox1.Text = calmipi.mipi_cal_function(80, 80, 80, 8, 8, 8, 1000 , 4).ToString();
         }
 
@@ -98,20 +98,10 @@ namespace Bruce_auto_V2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //MIPI mipical = new MIPI();
-            //string A = "3";
-            //byte A = Convert.ToByte("0A", 16);
-            Thread T = new Thread(Video_Auto_Text);
-            Thread T2 = new Thread(Test_Dectect);
+            textBox1.Text = mipiclasss.mipi_cal_bitrate(80, 80, 80, 2, 18, 8, 60, 4, 24).ToString();
 
-                T.Start();
-            T2.Start();
-            
-                
- 
 
-            
-            //T2.Start();
+
         }
 
         private void 儲存設定ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -194,6 +184,49 @@ namespace Bruce_auto_V2
             }
             
 
+        }
+
+        private void Set_Porch_Textbox(int hsa , int hbp , int hfp , int vsa ,int vbp , int vfp)
+        {
+            mipiclasss.Settextbox(textBox_hsa, hsa.ToString());
+            mipiclasss.Settextbox(textBox_hbp, hbp.ToString());
+            mipiclasss.Settextbox(textBox_hfp, hfp.ToString());
+            mipiclasss.Settextbox(textBox_vsa, vsa.ToString());
+            mipiclasss.Settextbox(textBox_vbp, vbp.ToString());
+            mipiclasss.Settextbox(textBox_vfp, vfp.ToString());
+        }
+
+        private void videomode_auto()
+        {
+            try
+            {
+                int init_hsa = Convert.ToInt32(textBox_hsa.Text);
+                int init_hbp = Convert.ToInt32(textBox_hbp.Text);
+                int init_hfp = Convert.ToInt32(textBox_hfp.Text);
+                int init_vsa = Convert.ToInt32(textBox_vsa.Text);
+                int init_vbp = Convert.ToInt32(textBox_vbp.Text);
+                int init_vfp = Convert.ToInt32(textBox_vfp.Text);
+                double goal_bitrate = Convert.ToDouble(textBox_videoauto_goal_bitrate.Text) * 1e6;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("請確認輸入是否正確");
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("請確認輸入是否正確");
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("請確認輸入是否正確");
+            }
+
+
+        }
+
+        private void videomode_run_btn_Click(object sender, EventArgs e)
+        {
+            videomode_auto();
         }
     }
 }
